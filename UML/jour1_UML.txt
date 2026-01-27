@@ -31,7 +31,7 @@ AMÉLIORATIONS :
 - Logique interne : C'est le Livre qui décide s'il peut être emprunté (via estDispo).
 - Centralisation : L'affichage des détails est défini une seule fois.
 ----challange 3----------
-+-------------------+     1..*   0..*            +---------------------------+
++-------------------+     1..*   0..*          +---------------------------+
 |     Etudiant      |--------------------------|           Cours           |
 +-------------------+                          +---------------------------+
 | - id   : Integer  |                          | - titre : String          |

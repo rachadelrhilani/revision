@@ -1,0 +1,9 @@
+/* 1-
+Quelle est la différence entre DDL (CREATE, ALTER) et DML (INSERT, UPDATE, 
+DELETE) ?  */
+-la différence entre DDL et DML c'est que DDL manipuler les tables tandit que DML il manipuler les donnes
+du tableaux
+/* 2- À quoi sert une clé primaire ?*/
+-une clé primaire sert à identifier entre les donnes 
+/* 3- Comment filtre-t-on des données avec la clause WHERE ?  ?*/
+-on filtre des donnees avec la clause WHERE à travers un donnes qu'est dans le tableau
