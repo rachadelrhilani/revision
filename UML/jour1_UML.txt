@@ -1,0 +1,49 @@
+----challange 1----------
++-----------------------+
+|         Livre         |
++-----------------------+
+| - titre  : String     |
+| - auteur : String     |
+| - isbn   : String     |
++-----------------------+
+|                       |  <-- VIDE (Problème : aucune logique)
++-----------------------+
+
+CRITIQUE :
+- Encapsulation : 0/10. Si les attributs sont publics, n'importe qui peut corrompre les données.
+- Comportement : Inexistant. La classe ne sait pas se gérer elle-même (ex: vérifier sa disponibilité).
+- Maintenance : Si on ajoute une règle (ex: longueur ISBN), il faut la coder partout SAUF dans la classe.
+----challange 2----------
++----------------------------+
+|           Livre            |
++----------------------------+
+| - titre  : String          |
+| - auteur : String          |
+| - isbn   : String          |
+| - estDispo : Boolean = true|
++----------------------------+
+| + emprunter() : void       |
+| + retourner() : void       |
+| + afficherDetails() : void |
++----------------------------+
+
+AMÉLIORATIONS :
+- Logique interne : C'est le Livre qui décide s'il peut être emprunté (via estDispo).
+- Centralisation : L'affichage des détails est défini une seule fois.
+----challange 3----------
++-------------------+     1..*   0..*            +---------------------------+
+|     Etudiant      |--------------------------|           Cours           |
++-------------------+                          +---------------------------+
+| - id   : Integer  |                          | - titre : String          |
+| - nom  : String   |                          | - capaciteMax : Integer   |
+| - email: String   |                          | - inscrits : List         |
++-------------------+                          +---------------------------+
+| + getNom(): String|                          | + inscription(Etudiant e) |
++-------------------+                          | + estComplet() : Boolean  |
+                                               +---------------------------+
+
+JUSTIFICATION :
+1. Expert en Information : La classe 'Cours' possède la donnée 'capaciteMax'. 
+   C'est donc elle qui doit vérifier s'il reste de la place avant d'accepter l'étudiant.
+2. Cohésion : L'étudiant n'a pas besoin de savoir comment un cours gère ses places. 
+   Il demande à s'inscrire, et le cours valide.
