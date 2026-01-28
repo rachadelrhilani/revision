@@ -7,3 +7,4 @@ du tableaux
 -une clé primaire sert à identifier entre les donnes 
 /* 3- Comment filtre-t-on des données avec la clause WHERE ?  ?*/
 -on filtre des donnees avec la clause WHERE à travers un donnes qu'est dans le tableau
+-on filtre des donnees avec la clause WHERE à travers un donnes qu'est dans le tableau

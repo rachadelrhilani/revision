@@ -1,0 +1,21 @@
+/*1. À quoi servent les fonctions COUNT, SUM, et AVG ?  */
+COUNT : Compte le nombre de lignes
+SUM : Calcule la somme totale des valeurs d'une colonne numérique.
+AVG (Average) : Calcule la moyenne des valeurs d'une colonne numérique.
+
+
+
+/* 2- Peut-on utiliser COUNT(*) et COUNT(colonne) de manière interchangeable ?*/
+Non,Parce que le SQL considère que NULL signifie "absence de donnée", 
+donc COUNT(colonne) ignore ces absences, alors que COUNT(*) regarde l'existence de la ligne entière
+
+/* 3- Comment MAX et MIN fonctionnent sur les dates ou les chaînes?*/
+Sur les Dates :
+MIN : Donne la date la plus ancienne (le passé).
+
+MAX : Donne la date la plus récente (le futur/présent).
+
+Sur les Chaînes de caractères :
+MIN : Donne la valeur qui arrive en premier par ordre alphabétique qui est proche de A).
+
+MAX : Donne la valeur qui arrive en dernier qui est proche de Z.
