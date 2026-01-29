@@ -6,7 +6,6 @@ class Voiture {
     public $modele;
     public $vitesse = 0; 
 
-    // Constructeur (Challenge 2)
     public function __construct($ma_marque, $mon_modele) {
         $this->marque = $ma_marque;
         $this->modele = $mon_modele;

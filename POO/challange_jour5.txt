@@ -1,0 +1,21 @@
+/*1. Qu’est-ce que l’encapsulation ? Quel est son but ? *:
+C'est le fait de cacher les données internes d'un objet 
+et de n'autoriser l'accès que par des méthodes contrôlées.
+But : Protéger l'objet contre les mauvaises manipulations (ex: empêcher une vitesse négative ou un solde illogique).
+
+/*2. Différence entre public, private et protected ? */
+Ces mots-clés définissent la visibilité :
+
+public : Accessible de partout (intérieur et extérieur de la classe).
+
+private : Accessible uniquement à l'intérieur de la classe elle-même.
+
+protected : Accessible dans la classe elle-même ET dans ses classes "enfants" (héritage).
+
+/*3. À quoi servent les getters et setters ? Est-ce toujours nécessaire ?*/
+
+Getters : Fonctions pour lire la valeur d'un attribut privé.
+
+Setters : Fonctions pour modifier la valeur d'un attribut privé en y ajoutant des règles de contrôle.
+
+Nécessité : Non, ce n'est pas obligatoire pour chaque attribut. Si un attribut n'a pas besoin d'être modifié ou lu de l'extérieur, on ne crée rien.
