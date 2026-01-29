@@ -1,0 +1,8 @@
+/* 1. Quelle est la différence entre une classe et un objet ?  */
+La Classe : C'est la définition. C'est une liste de caractéristiques et d'actions possibles. Elle ne contient pas de données réelles, c'est juste une structure.
+
+L'Objet : C'est l'exemplaire. C'est la version réelle qui contient de vraies informations et que l'on peut manipuler dans le code.
+/* 2. À quoi sert le mot-clé $this ?   */
+C'est un pointeur interne. Il sert à dire à l'ordinateur : "Utilise la variable qui appartient à cet objet précis et pas une autre." C'est le moyen pour l'objet d'accéder à ses propres informations.
+/* 3. Quel est le rôle du constructeur (__construct) ?  */
+C'est le configurateur. C'est une fonction qui prépare l'objet dès sa naissance. Elle permet de lui donner ses informations de base au moment précis où on le crée, pour qu'il soit directement utilisable.
