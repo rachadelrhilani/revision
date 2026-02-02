@@ -1,0 +1,53 @@
+1. Composition vs Agrégation
+Composition (Lien "Fort") : Si tu détruis le parent, l'enfant est détruit.
+Exemple : Un Livre et ses Pages. Pas de livre = pas de pages.
+Agrégation (Lien "Faible") : L'objet peut exister tout seul ailleurs.
+Exemple : Une Classe et des Élèves. Si la classe ferme, les élèves existent toujours.
+
+
+2. Lire une cardinalité (1..*)
+Il faut lire : "Minimum .. Maximum".
+1 : Exactement un.
+* : Plusieurs (l'infini).
+1..* : Au moins un, mais peut-être beaucoup plus.
+Exemple (1.. des deux côtés) :* Un prof a au moins 1 élève, et un élève a au moins 1 prof.
+
+
+3. Classe Associative
+C'est une classe qui sert de "pont" pour stocker une info qui appartient à une relation.
+Quand l'utiliser : Quand l'info ne va ni dans l'un, ni dans l'autre, mais dans le mélange des deux.
+Exemple : Un Élève et un Examen. La Note ne va pas dans l'élève (il a plusieurs notes), ni dans l'examen (il y a plusieurs notes d'élèves). La note va dans une classe associative appelée "Résultat".
+Tu trouveras des schémas clairs sur le site de Lucidchart ou dans ce guide UML.
+
+-----------------------------------
+\* challange 1 *\
+ +---------------+              +---------------+
+ |    Maison     |              |     Piece     |
+ +---------------+              +---------------+
+ | - adresse     |◆1----------* | - nom         |
+ | - ville       |              | - surface     |
+ +---------------+              +---------------+
+Justification : Si la Maison est détruite, les pièces n'existent plus.
+\* challange 2 *\
+ +---------------+              +---------------+
+ |   Etudiant    |              |     Cours     |
+ +---------------+              +---------------+
+ | - nom         |*------------*| - titre       |
+ | - matricule   |              | - code        |
+ +---------------+              +---------------+
+Lecture : Un étudiant suit plusieurs cours, un cours contient plusieurs étudiants.
+\* challange 3 *\
+ +---------------+              +---------------+
+ |   Etudiant    |              |     Cours     |
+ +---------------+--------------+---------------+
+ | - nom         |*     |      *| - titre       |
+ +---------------+      |       +---------------+
+                        |
+                +---------------+
+                |  Inscription  | 
+                +---------------+
+                | - date        |
+                | - note        |
+                +---------------+
+Il faut remplacer le losange plein par une association simple (un trait droit —)
+ ou une agrégation (losange vide ◇) si on veut marquer une appartenance faible.
