@@ -1,0 +1,11 @@
+ Questions Théoriques
+1.Différence INNER JOIN vs LEFT JOIN :
+INNER JOIN : Ne garde que les lignes qui ont une correspondance dans les deux tables. (Le "noyau" commun).
+LEFT JOIN : Garde toutes les lignes de la table de gauche, même si elles n'ont pas de correspondance à droite (remplit alors avec NULL).
+
+2)Quand utiliser un RIGHT JOIN ?
+Quand tu veux garder toutes les lignes de la table de droite, même sans correspondance à gauche.
+Astuce : On l'utilise rarement, car on peut souvent obtenir le même résultat en inversant les tables avec un LEFT JOIN.
+
+3.Joindre plus de deux tables ?
+Oui ! Tu peux enchaîner autant de JOIN que nécessaire dans une seule requête. SQL traite les jointures les unes après les autres.
