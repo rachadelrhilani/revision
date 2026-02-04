@@ -1,0 +1,14 @@
+ Questions Théoriques
+1.WHERE vs HAVING :
+WHERE trie les lignes (avant calcul).
+HAVING trie les groupes (après calcul, pour les SUM, COUNT, etc.).
+2.L'ordre de la machine (Logique SQL) :
+FROM (D'où ça vient ?)
+WHERE (Quelles lignes ?)
+GROUP BY (Quel regroupement ?)
+HAVING (Quels groupes ?)
+SELECT (Quelles colonnes ?)
+ORDER BY (Quel tri ?)
+3.Les Alias (AS) :
+Dans WHERE : NON (l'ordinateur ne le connaît pas encore).
+Dans ORDER BY : OUI (c'est la dernière étape).
