@@ -1,0 +1,12 @@
+1.Fonctionnement et extends : L'héritage permet à une classe "enfant" de récupérer 
+toutes les méthodes et propriétés d'une classe "parent". Le mot-clé extends sert à créer ce lien.
+ Cela évite de réécrire le même code plusieurs fois.
+
+
+2.parent:: vs self:: : On utilise self:: pour appeler un élément de la classe actuelle. 
+On utilise parent:: pour appeler une méthode ou un constructeur de la classe parente 
+(très utile quand on a modifié une méthode mais qu'on veut quand même utiliser l'originale).
+
+
+3.Le protected : C'est une sécurité. Une propriété protected est invisible pour l'utilisateur final,
+mais elle reste accessible pour toutes les classes qui héritent de la classe parente.
