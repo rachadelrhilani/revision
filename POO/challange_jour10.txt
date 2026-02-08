@@ -1,0 +1,24 @@
+1.Qu’est-ce que l’abstraction ?
+L’abstraction est un principe de la POO qui permet de :
+
+définir une structure commune
+
+sans montrer les détails
+
+et obliger les classes filles à implémenter certaines méthodes.
+
+Elle décrit ce que l’objet doit faire, pas comment il le fait.
+
+2.Peut-on instancier une classe abstraite ? Pourquoi ?
+
+Non, on ne peut pas instancier une classe abstraite.
+
+Parce qu’elle sert seulement de modèle pour les autres classes
+Elle peut contenir des méthodes non implémentées
+
+3.Peut-on déclarer une méthode abstraite private ? Expliquez.
+
+Non, une méthode abstraite ne peut pas être private.
+
+Parce qu’une méthode abstraite doit être implémentée par les classes filles
+Une méthode private n’est pas accessible aux classes héritées
