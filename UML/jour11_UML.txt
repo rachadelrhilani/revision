@@ -3,9 +3,17 @@
 2. Pourquoi est-il crucial de maintenir la cohérence entre le diagramme de classes et l'implémentation ?La cohérence est vitale pour trois raisons : Maintenance : Si le code s'écarte du diagramme, la documentation devient inutile et les erreurs de logique se multiplient.Communication : Le diagramme est le langage commun entre développeurs et architectes. S'ils ne disent pas la même chose, l'équipe travaille à l'aveugle.Évolutivité : Un code bien structuré selon un plan UML est beaucoup plus facile à modifier sans tout casser. 
 3. Quelle est la différence entre un acteur principal et un acteur secondaire ? Acteur Principal : C'est celui qui initie le cas d'utilisation. Il a un objectif à atteindre (ex: le Client qui veut commander). On le place généralement à gauche du diagramme.Acteur Secondaire : C'est celui qui est sollicité par le système pour réaliser le cas d'utilisation (ex: une Banque pour valider un paiement). On le place généralement à droite. 
 ● Challenges Pratiques 
+
 Challenge 1 : Du code vers l'UML Puisque tu ne m'as pas encore fourni le code PHP, voici ce que tu dois surveiller pour ton dessin : Les propriétés privées/publiques (- ou +).Les méthodes avec leurs paramètres.
 Les liaisons : si une classe contient une instance d'une autre, dessine une flèche d'association. 
-Challenge 2 : Modélisation Personne / Etudiant / Professeur Voici la structure à dessiner (Le sens de la flèche est crucial) : 
+
+Challenge 2 : 
+Modélisation Personne / Etudiant / Professeur Voici la structure à dessiner (Le sens de la flèche est crucial) : 
 Classe parente : Personne (en haut).
 Classes enfants : Etudiant et Professeur (en bas).Le sens de la flèche : La flèche part de l'enfant et pointe vers le parent. La tête de flèche est un triangle vide.Etudiant \(\longrightarrow \) PersonneProfesseur \(\longrightarrow \) Personne 
-Challenge 3 : E-commerce & Généralisation Acteur Principal : Le Visiteur ou le Client.Acteurs Secondaires : Le Système de Paiement (Stripe/PayPal), le Service de Livraison (API transporteur).Généralisation d'acteurs :Acteur parent : Utilisateur (peut se connecter).Acteurs spécialisés : Client (achète) et Administrateur (gère le stock).UML : On dessine un "bonhomme" Client avec une flèche pointant vers le "bonhomme" Utilisateur.
+
+Challenge 3 : 
+E-commerce & Généralisation Acteur Principal : Le Visiteur ou le Client.Acteurs Secondaires : Le Système de Paiement (Stripe/PayPal), le Service de Livraison (API transporteur).
+Généralisation d'acteurs :Acteur parent : Utilisateur (peut se connecter).
+Acteurs spécialisés : Client (achète) et Administrateur (gère le stock).
+UML : On dessine un "bonhomme" Client avec une flèche pointant vers le "bonhomme" Utilisateur.

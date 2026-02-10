@@ -1,0 +1,14 @@
+1. Quand utiliser une sous-requête plutôt qu'une jointure ?
+
+Sous-requête : Quand tu as besoin d'une valeur unique pour un filtre (ex: trouver ceux qui gagnent plus que la moyenne) ou pour vérifier une existence (WHERE EXISTS).
+Jointure : Quand tu as besoin d'afficher des colonnes venant de plusieurs tables différentes. Les jointures sont généralement plus performantes sur de gros volumes de données.
+
+2. À quoi sert la clause CASE WHEN THEN ?
+
+Elle permet d'ajouter de la logique conditionnelle (le "IF/ELSE") directement dans ta requête SQL pour transformer une donnée brute en étiquette lisible.
+Exemple métier : Transformer un statut numérique en texte : CASE WHEN status = 1 THEN 'Payé' WHEN status = 0 THEN 'En attente' ELSE 'Annulé' END.
+
+3. Qu'est-ce qu'une sous-requête corrélée ?
+
+C'est une sous-requête qui fait référence à une colonne de la requête principale (la requête parente). Elle s'exécute ligne par ligne, ce qui peut la rendre plus lente.
+Image : C'est comme une boucle imbriquée où la recherche interne dépend de la ligne externe actuelle.
