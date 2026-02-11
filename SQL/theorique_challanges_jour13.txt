@@ -1,0 +1,20 @@
+1. Afficher les 5 meilleurs clients (CA)
+
+Pour obtenir ce résultat, il faut :
+Faire une jointure entre la table Clients et la table des ventes.
+Utiliser la fonction d'agrégation SUM() sur le montant des ventes.
+Grouper par client (GROUP BY).
+Trier par le résultat du calcul de façon décroissante (ORDER BY ... DESC).
+Appliquer une clause de limitation (LIMIT 5).
+
+2. Identifier un produit jamais commandé
+
+Il existe deux approches courantes :
+Le LEFT JOIN : On joint la table Produits avec la table des lignes de commandes,
+On cherche ensuite les lignes où la clé étrangère du produit est NULL (ce qui signifie qu'aucune correspondance n'a été trouvée).
+La sous-requête : Utiliser la clause WHERE id_produit NOT IN (SELECT id_produit FROM details_commandes).
+
+3. Calculer le panier moyen par client
+
+La stratégie consiste à diviser le chiffre d'affaires total d'un client par son nombre de commandes uniques :
+En SQL, cela se traduit souvent par SUM(montant) / COUNT(DISTINCT id_commande).
